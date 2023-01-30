@@ -8,6 +8,15 @@ public class Main {
     public static int num = 255;
     public static int [][] newMyMass = new int[size][size];
 
+    public static void rotation270(int mas[][]){
+        for(int i = size-1; i >= 0; i--){
+            for(int j = 0; j < size; j++)  {
+                newMyMass[i][j] = mas[j][i];
+                System.out.print(newMyMass[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
     public static void rotation180(int mas[][]){
         for(int i = size-1; i >= 0; i--){
             for(int j = size-1; j >= 0; j--)  {
@@ -37,11 +46,14 @@ public class Main {
             System.out.println();
 
         }
-        System.out.println();
+        //System.out.println("\n");
 
-
-rotation90(myMass);
-rotation180(myMass);
+        System.out.println("\nПоворот на 90 \n");
+        rotation90(myMass);
+        System.out.println("\n Поворот на 180 \n");
+        rotation180(myMass);
+        System.out.println("\nПоворот на 270 \n");
+        rotation270(myMass);
 
     }
 }
